@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+     <script src="D.html"></script>
+         <style type = "text/css">
+             body {font-size: 1.4em;}
+             .hidden {display:none;}
+             .show {display: inline !important;}
+             button{
+                 border: 3px black; background: #808080;
+                 font-size: .5em; font-weight: bold; color:lightblue;
+                 padding: .8em 2em;
+                 margin-top: .4em;
+             }
+             </style>      
+</head>
+<body>
+    <p id="hello"></p>
+
+    <script>
+        var yourName = prompt("what is your Name?");
+
+        if(yourName != null)
+        {
+            document.getElementById("hello").innerHTML = "hello" + yourName;
+
+        }
+        else {
+            alert ("Please enter yourName");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html>
+<head>  
+<script>
+function Call(){  
+var firstname=document.myform.firstname.value;  
+var lastname=document.myform.lastname.value;  
+var Age=document.myform.age.value;  
+var mobile=document.myform.mobile.value;  
+var email=document.myform.email.value;    
+  localStorage.getItem('firstname',firstname);
+  localStorage.getItem('lastname',lastname);
+  localStorage.getItem('age',Age);
+  localStorage.getItem('mobile',mobile);
+  localStorage.getItem('email',email);
+ open("Welcome.html");
+
+}  
+</script>  
+</head>
+    <body style="width:100%;height:100%"> 
+        <div id="nav">
+            <ul>
+                <li><a href="#Home">HOME</a></li>
+                <li><a href="#News">NEWS</a></li>
+                <li><a href="#Contact">CONTACT</a></li>
+                <li><a href="#About">ABOUT</a></li>
+            </ul>
+        </div>
+        <div style="width:500px;height:340px;background-color:lightblue" id="First">
+            <form  name="myform" method="post"  onsubmit="Call()">  
+
+                <table>
+                    <caption id="form">FORMS</caption>
+                    <tr>
+                        <td class="lable">First Name </td>
+                        <td>:<input type="text" name="firstName" id="firstname" placeholder="FirstName" required /></td>
+                    </tr>
+                    <tr>
+                        <td class="lable">Last Name </td>
+                        <td>:<input type="text" name="lastName" id="lastname" placeholder="LastName" required /></td>
+                    </tr>
+                    <tr>
+                        <td class="lable">Age </td>
+                        <td>:<input type="text" name="age" placeholder="Age" id="age"  required />
+                        <td>
+                    </tr>
+                    <tr>
+                        <td class="lable">Mobile Number </td>
+                        <td>:<input type="text" name="mobileNumber" id="mobile" maxlength="10" placeholder="MobileNumber" required /></td>
+                    </tr>
+                    <tr>
+                        <td class="lable">Email </td>
+                        <td>:<input type="email" name="email" placeholder="Email" id="email" required /></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><input type="submit" id="submit" value="submit" /></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </body>
+
+</html> 

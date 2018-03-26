@@ -1,0 +1,71 @@
+﻿<html>
+<head><style type="text/css">
+    body {
+        font-size:  large;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    .show {
+        display: inline !important;
+    }
+
+
+    button {
+        border: 3px black;
+        background: #808080;
+        font-size: .5em;
+        font-weight: bold;
+        color: lightblue;
+        padding: .8em 2em;
+        margin-top: .4em;
+    }
+</style>     
+</head>
+<body>
+<script>  
+   
+function validateform(){  
+var name=document.myform.name.value;  
+var password = document.myform.password.value;
+var MobileNumber = document.myform.MobileNumber.value;
+var Address = document.myform.Address.value;
+
+
+  
+if (name == null || name == "")
+  {
+     alert("Name can't be blank");  
+     return false;  
+  }
+else if (password.length < 6)
+  {
+    alert("Password must be at least 6 characters long.");  
+    return false;  
+  }
+else if (MobileNumber.length < 10)
+  {
+     alert("MobileNumber must be at least 10 Digits long.");
+     return false;
+  }
+else if (Address == null || Address == "")
+   {
+      alert("Address can't be blank");
+      return false;
+   }
+}  
+</script>  
+   
+<form name="myform" method="post" action="http://www.youtube.com" onsubmit="return validateform()" > 
+   
+
+        Name: <input type="text" name="name"><br />
+        Password: <input type="password" name="password"><br />
+        MobileNumber: <input type="text" name="MobileNumber"><br />
+        Address: <input type="text" name="Address"><br />
+        <input type="submit" value="register"><br/>  
+    </form>
+</body>
+</html>

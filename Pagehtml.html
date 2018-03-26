@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome</title>
+ </head>
+<body>
+    <script>
+        function validation()
+        {
+            var firstName = document.myform.firstName.value;
+            var lastName = document.myform.lastName.value;
+
+        }
+        if(name == null || name == "")
+        {
+            alert("Name can't be blank");              
+        }
+        if (lastName == null || lastName == "") {
+            alert("Name can't be blank");
+        }       
+
+    </script>
+    <form name="myform", method="post"  action="https://www.w3schools.com/js/js_object_methods.asp" onsubmit="return validateForm()">
+        firstName : <input type="text" name="firstame"><br/>
+        lastName : <input type="text" name="lastName"><br />
+
+        <input type="submit" value="register"><br /> 
+    </form> 
+
+</body>
+</html>
